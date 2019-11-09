@@ -67,18 +67,18 @@
 //   border: 1px silid red;
 // }
 
-// .kg-image-card {
+.kg-image-card {
 
-//   img {
-//     display: block;
-//     width: 60%;
-//     max-width: 600px;
-//     margin: 1rem auto;
-//     border: 3px solid $color-black;
+  img {
+    display: block;
+    width: 60%;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    border: 3px solid $color-black;
 
-//     @include small {
-//       width: 100%;
-//     }
-//   }
-// }
+    @include small {
+      width: 90%;
+    }
+  }
+}
 

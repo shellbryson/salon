@@ -66,3 +66,41 @@ body {
     grid-template-columns: 3fr 1fr;
   }
 }
+
+.sal-featured {
+  margin-bottom: 4rem;
+  border: 1px solid $color-border;
+  padding: 2rem 1rem;
+}
+
+.sal-post {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $color-border;
+
+  &__title {
+    display: flex;
+    width: 70%;
+  }
+
+  &__thumb {
+
+    img {
+      margin-left: 1rem;
+      width: 150px;
+    }
+
+    &--pre {
+
+      img {
+        margin-left: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__excerpt {
+    width: 80%;
+  }
+
+}

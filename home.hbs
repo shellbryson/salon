@@ -16,13 +16,32 @@
         {{content}}
       </div>
     </div>
+    {{/if}}
+    {{/post}}
+    {{/get}}
+
+    {{#get "posts" include="tags,authors" as |post|}}
+    {{#post}}
+    {{#if featured}}
+
     {{else}}
-    <div class="sal-post">
-      <div class="sal-content">
-        <h1>{{title}}</h1>
-        {{content}}
+      <div class="sal-post">
+        <div class="sal-content">
+          <div class="sal-post__title">
+            <a href="blog/{{slug}}">
+              <h2>{{title}}</h2>
+            </a>
+            {{#if feature_image}}
+            <div class="sal-post__thumb">
+              <img src="{{img_url feature_image}}" alt="{{title}}" class="thumb" />
+            </div>
+            {{/if}}
+          </div>
+          <div class="sal-post__excerpt">
+            <p>{{excerpt}}</p>
+          </div>
+        </div>
       </div>
-    </div>
     {{/if}}
     {{/post}}
     {{/get}}

@@ -1,0 +1,24 @@
+{{!< default}}
+
+<div class="sal-split-uneven">
+  <div>
+    <h1>Events</h1>
+    {{content}}
+    {{#get "posts" filter="tag:events" limit="9" include="tags,authors" as |post|}}
+    {{#post}}
+    <div class="sal-post">
+      <div class="sal-content">
+        <a href="blog/{{slug}}">
+          <h2>{{title}}</h2>
+        </a>
+        {{excerpt}}
+      </div>
+    </div>
+    {{/post}}
+    {{/get}}
+  </div>
+
+
+
+  {{>sidebar}}
+</div>
