@@ -25,6 +25,9 @@
     {{#if featured}}
 
     {{else}}
+      {{#has tag="events"}}
+
+      {{else}}
       <div class="sal-post">
         <div class="sal-content">
           <div class="sal-post__title">
@@ -42,6 +45,7 @@
           </div>
         </div>
       </div>
+      {{/has}}
     {{/if}}
     {{/post}}
     {{/get}}

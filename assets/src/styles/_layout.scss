@@ -80,13 +80,18 @@ body {
 
   &__title {
     display: flex;
-    width: 70%;
+    width: 100%;
+
+    @include small {
+      width: 70%;
+    }
   }
 
   &__thumb {
 
     img {
       margin-left: 1rem;
+      margin-bottom: 1rem;
       width: 150px;
     }
 
@@ -94,13 +99,40 @@ body {
 
       img {
         margin-left: 0;
-        margin-bottom: 1rem;
       }
     }
   }
 
   &__excerpt {
-    width: 80%;
+    width: 100%;
+
+    @include small {
+      width: 80%;
+    }
   }
 
+}
+
+.sal-event-list {
+  margin-top: 2rem;
+
+  &__event {
+    display: flex;
+    margin-bottom: 4rem;
+    border: 1px solid $color-border;
+    padding: 2rem 1rem;
+  }
+
+  &__title {
+
+  }
+
+  &__image {
+    margin-left: 1rem;
+    width: 150px;
+  }
+
+  &__excerpt {
+
+  }
 }
