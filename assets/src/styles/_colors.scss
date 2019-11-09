@@ -2,6 +2,8 @@
 $color-white: #ffffff;
 $color-black: #000000;
 // $color-body: #2d4277;
+$color-body-text: rgba(0,0,0,0.9);
+$color-border: rgba($color-black, 0.1);
 $color-body-alternate: #494f62;
 $color-background-shade: #f7f7f7;
 $color-brand-marketing: #00cfff;
@@ -26,10 +28,10 @@ $color-transparent: rgba(0, 0, 0, 0);
 $color-exclusive: #e6b272;
 
 
-// SFF colors
-$color-background: #a8b1da;
+// Salon colors
+$color-background: rgba(0,0,0,0.05);
 $color-panel-bg: lighten($color-background, 30%);
-$color-body: darken($color-background, 80%);
+$color-body: $color-body-text;
 $color-brand: #b81717;
 
 // Colors v2

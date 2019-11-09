@@ -27,7 +27,7 @@ p {
     margin-bottom: 0;
   }
 
-  .sff__footer & {
+  .sal__footer & {
     font-size: 0.75rem;
   }
 }
@@ -199,24 +199,8 @@ ol {
 
 img {
 
-  .lane__content & {
+  .lane__lane & {
     max-width: 100%;
-  }
-}
-
-.image {
-  display: block;
-
-  &--300 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px!important;
-  }
-
-  &--200 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 200px!important;
   }
 }
 
@@ -287,7 +271,7 @@ a {
   font-weight: 600;
   text-decoration: none;
 
-  .sff__content & {
+  .sal__content & {
     color: $color-body;
 
     &:focus,
@@ -310,18 +294,6 @@ a {
   &:focus {
     color: $color-black;
     border-bottom: 1px solid rgba($color-brand, 0.9);
-  }
-
-  // Inside an inverted (dark) background
-  .lane--inverse & {
-    color: $color-white;
-    border-bottom: 1px solid rgba($color-white, 0.4);
-
-    &:hover,
-    &:focus {
-      color: $color-white;
-      border-bottom: 1px solid rgba($color-white, 0.9);
-    }
   }
 }
 
