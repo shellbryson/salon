@@ -3,68 +3,30 @@
 // ############################################################################
 
 body {
-  background-color: $color-background;
-  width: 100vw;
-  overflow-x: hidden;
+  background-color: $color-white;
+  width: 100%;
 }
 
-.sff {
+.sal {
 
-  &__wrapper {
-    max-width: 1440px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__layout {
+    background-color: $color-background;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    overflow-y: hidden;
   }
 
   &__lane {
-    margin-bottom: 3rem;
-  }
-
-  &__cols {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-    width: 100%;
-    margin-top: 3rem;
-
-    @include small {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    > div {
-      width: 100%;
-    }
-  }
-
-  &__box {
-    margin-top: 4rem;
-    padding-top: 1rem;
-    border-top: 0.5rem solid $color-black;
+    // width: 100%;
+    // margin-bottom: 3rem;
 
     img {
-      width: 300px;
-      margin-bottom: 1rem;
-    }
-  }
-
-  &__panel {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-panel-bg;
-    box-shadow: 2px 2px 15px 0px rgba($color-black, 0.2);
-  }
-
-  &__panel-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    > div {
-      border: 1px dotted darken($color-panel-bg, 10%);
-    }
-
-    img {
-      width: 100%;
+      max-width: 400px;
+      height: auto;
     }
   }
 
@@ -85,304 +47,92 @@ body {
   }
 }
 
-.lane {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-
-  // Insite a stripe container
-  .stripe & {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  &__wrap {
-    display: block;
-    max-width: 1110px;
-    width: 100%;
-    margin: 0 auto;
-
-    .lane--split & {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 1rem;
-
-      @include small {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 4rem;
-      }
-
-      > div {
-
-        align-self: center;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .lane--split-75 & {
-
-      @include small {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-gap: 2rem;
-      }
-
-      > div {
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .lane--split-66 & {
-
-      @include small {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 1rem;
-      }
-
-      @include medium {
-        grid-gap: 2rem;
-      }
-    }
-
-  }
-
-  &--masthead {
-    display: flex;
-    min-height: 350px;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-
-    @include small {
-      min-height: 450px;
-    }
-  }
-
-  &--masthead-small {
-    display: flex;
-    min-height: 150px;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-
-    @include small {
-      min-height: 150px;
-    }
-  }
-
-  // This spacer may be overided by striped/inversed sections
-  &--spacer {
-    margin-top: 75px;
-
-    .stripe & {
-      margin-top: 43px; // 75 - 2rem (padding of stripe)
-    }
-  }
-
-  &--inverse {
-    background-color: $color-bg-lane-inverse;
-  }
-
-  &--shaded {
-    background-color: #e9ecf3;
-  }
-
-  &--split {
-
-  }
-
-  // If two sections with backgrounds are next to each other, then we should always remove the spacing
-  // to avoid a weird white gap
-  &--shaded + &--shaded {
-    margin-top: 0!important
-  }
-
-  &--shaded + &--shaded {
-    margin-top: 0!important
-  }
-
-  &--shaded + &--inverse {
-    margin-top: 0!important
-  }
-
-  &--wide {
-
-    .lane__wrap {
-      max-width: 1440px;
-    }
-  }
-
-  &--tiled-background {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-repeat: repeat;
-    background-size: auto;
-
-    @include small {
-      margin-top: 2rem;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
-  }
-
-  // CONTENT ZONE
-  &__content {
-    display: block;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    @include content-max {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    // INSIDE: masthead
-    .lane--masthead & {
-
-      @include xsmall {
-        width: 60%;
-      }
-
-      @include small {
-        width: 50%;
-      }
-    }
-
-    &--padded {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-
-      @include small {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-    }
-  }
-}
-
 // ############################################################################
 // Splits (do not apply to lanes)
 // ############################################################################
 
-.split-50 {
+.sal-split-uneven {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
 
   @include small {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @include large {
+    grid-template-columns: 3fr 1fr;
   }
 }
 
-.split-75 {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+.sal-featured {
+  margin-bottom: 4rem;
+  border: 1px solid $color-border;
+  padding: 2rem 1rem;
 }
 
-// ############################################################################
-// Striping
-// ############################################################################
+.sal-post {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $color-border;
 
-.stripe {
-
-  section {
-
-    &:nth-child(even) {
-      background-color: $color-bg-lane;
-    }
-  }
-}
-
-.download-box {
-  display: inline-block;
-  padding: 2rem;
-  background: $color-white;
-  border-radius: 1rem;
-
-  &__inner {
+  &__title {
     display: flex;
+    width: 100%;
 
-    p {
-      font-family: $base-font-bold;
+    @include small {
+      width: 70%;
     }
+  }
+
+  &__thumb {
 
     img {
-      margin-right: 2rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      width: 150px;
+    }
+
+    &--pre {
+
+      img {
+        margin-left: 0;
+      }
     }
   }
-}
 
-.download-image {
-  max-width: 300px;
-  margin: 1rem auto;
+  &__excerpt {
+    width: 100%;
 
-  img {
-    margin: 1rem auto;
-    max-width: 300px;
+    @include small {
+      width: 80%;
+    }
   }
 
-  &__actions {
+}
+
+.sal-event-list {
+  margin-top: 2rem;
+
+  &__event {
     display: flex;
-    margin-top: 1rem;
-
-    .mz-button {
-
-      &:first-child {
-        margin-right: 1rem;
-      }
-
-      &:last-child {
-        margin-left: 1rem;
-      }
-    }
-  }
-}
-
-// ############################################################################
-// Scrolling
-// ############################################################################
-
-.mz-no-scroll {
-  overflow: hidden;
-  height: 100%;
-  touch-action: none;
-
-  @include medium {
-    overflow: inherit;
-    touch-action: allow;
-  }
-}
-
-// ############################################################################
-// Special content
-// ############################################################################
-
-.kg-card {
-
-}
-
-// Videos etc that are not in standard content blocks
-.kg-embed-card {
-  margin: 2rem auto;
-
-  iframe {
-    display: block;
-    width: 75%;
-    margin: 1rem auto;
+    margin-bottom: 4rem;
+    border: 1px solid $color-border;
+    padding: 2rem 1rem;
   }
 
-  figcaption {
-    display: block;
-    margin: 1rem auto;
-    text-align: center;
+  &__title {
+
+  }
+
+  &__image {
+    margin-left: 1rem;
+    width: 150px;
+  }
+
+  &__excerpt {
+
   }
 }

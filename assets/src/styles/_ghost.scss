@@ -1,0 +1,84 @@
+// ############################################################################
+// Ghost containers
+// ############################################################################
+
+// .kg-card {
+//   max-width: 100%;
+// }
+
+// .kg-bookmark-card {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-container {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-content {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-title {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-description {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-metadata {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-icon {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-author {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-publisher {
+//   border: 1px silid red;
+// }
+
+// .kg-bookmark-thumbnail {
+//   border: 1px silid red;
+// }
+
+// .kg-width-wide {
+//   border: 1px silid red;
+// }
+
+// .kg-width-full {
+//   border: 1px silid red;
+// }
+
+// .kg-gallery-container {
+//   border: 1px silid red;
+// }
+
+// .kg-gallery-row {
+//   border: 1px silid red;
+// }
+
+// .kg-gallery-image {
+//   max-width: 80%;
+//   border: 1px silid red;
+// }
+
+.kg-image-card {
+
+  img {
+    display: block;
+    width: 60%;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    border: 3px solid $color-black;
+
+    @include small {
+      width: 90%;
+    }
+  }
+}
+
