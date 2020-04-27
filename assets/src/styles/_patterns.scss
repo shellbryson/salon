@@ -189,18 +189,23 @@ blockquote {
 
 // Default non-content links (images & misc page furnature)
 a {
-  @include font;
-  font-weight: 600;
   text-decoration: none;
 
-  .sal__content & {
-    color: $color-body;
+  .content & {
+    @include font;
+    font-weight: 600;
+
+    color: $color-link1;
+    border-bottom: 1px dotted $color-link1;
+    transition: $animation-speed;
 
     &:focus,
     &:hover {
-      color: $color-brand;
+      color: $color-link2;
+      border-bottom: 1px dotted $color-body;
     }
   }
+
 }
 
 // ############################################################################
@@ -216,20 +221,20 @@ strong {
 // ############################################################################
 
 // Trick to maintain 16:9 ratio:
-.mz-video {
-  height: 0px;
-  position: relative;
-  margin: 1rem 0;
-  padding-top: 56.25%;
+// .mz-video {
+//   height: 0px;
+//   position: relative;
+//   margin: 1rem 0;
+//   padding-top: 56.25%;
 
-  &__source {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
+//   &__source {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
+// }
 
 // ############################################################################
 // Forms

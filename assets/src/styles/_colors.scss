@@ -1,13 +1,36 @@
-// Base colors
+// #######################
+// ## Salon colors
+// #######################
+
+// PRIMARY
 $color-white: #ffffff;
 $color-black: #000000;
-// $color-body: #2d4277;
-$color-body-text: rgba(0,0,0,0.9);
-$color-border: rgba($color-black, 0.1);
-$color-body-alternate: #494f62;
-$color-background-shade: #f7f7f7;
-$color-brand-marketing: #00cfff;
+$color-shade1: #002734;
+$color-shade2: #002c3b;
+$color-light1: #bdeeff;
+$color-light2: #98c4d3;
 
+$color-alt1: #e2e2e2;
+$color-alt2: #f7f7f7;
+
+// BACKGROUNDS
+$color-background: $color-alt1;
+$color-background-body: $color-alt2;
+
+// NAVIGATION & FOOTERS
+$color-navigation-fg: $color-light1;
+$color-navigation-bg: $color-shade1;
+
+// COPY
+$color-headings: $color-shade1;
+$color-body-text: $color-shade2;
+$color-border: $color-shade2;
+
+// LINKS
+$color-link1: #fd3b7a;
+$color-link2: #ae0c40;
+
+// BUTTONS
 $color-button-primary: #e01053;
 $color-button-primary-hover: #fd3b7a;
 $color-button-primary-active: #ae0c40;
@@ -25,54 +48,20 @@ $color-button-tertiary-disabled :#194288;
 
 $color-transparent: rgba(0, 0, 0, 0);
 
-$color-exclusive: #e6b272;
 
-
-// Salon colors
-$color-background: rgba(0,0,0,0.05);
 $color-panel-bg: lighten($color-background, 30%);
 $color-body: $color-body-text;
 $color-brand: #b81717;
 
-// Colors v2
-//$color-brand: #2d4277;
-$color-heading: #2d4277;
-$color-heading-invert: $color-white;
-$color-lane-background: #2d4277;
-$color-lane-background-alt: $color-white;
-$color-lane-background-fade: #f8fafb;
-$color-lane-background-orange: #e6b272;
-$color-heading-sub: #e6b272;
+
+
+
 $color-active: #e6b272;
 $color-faint: #f2f3f5;
-$color-lane-grey: #f2f3f5;
 
-// Lanes
-$color-bg-lane-inverse: #505b77;
-
-
-$color-bg-lane: #f7f7f7;
-$color-bg-lane-darker: $color-faint;
-$color-bg-lane-blackout: #4f5f6b;
-$color-bg-lane-blackout-alt: $color-body;
-
-// Text
-$color-headings: $color-body;
-$color-body-faint: lighten($color-body, 30%);
-
-// Sidebar
-$color-sidebar: #fcfcfc;
 
 // Forms
 $color-field-placeholder: $color-body;
 $color-field-border: #c4cdd5;
 $color-button: $color-brand;
 $color-form-error: #ff0000;
-
-// Alias
-$color-link-hover: $color-brand;
-$color-brand-icon: $color-brand;
-
-// Footer
-$color-footer-titles: #75889d;
-$color-footer-background: #494f62;

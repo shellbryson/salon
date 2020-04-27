@@ -3,35 +3,52 @@
 // * Primary / Mobile navigation
 // *****************************************************************************
 
-.navigation {
-
+.sal-navigation {
   display: block;
   position: relative;
-  justify-content: space-between;
+  margin-bottom: 2rem;
+  background-color: $color-navigation-bg;
+  color: $color-navigation-fg;
+  border-radius: 8px;
+  overflow: hidden;
 
   &__logo {
-    width: 90px;
-    margin: 0 auto;
+    text-align: center;
+    margin: 1rem auto 0;
 
     @include small {
       position: absolute;
-      top: 0;
-      width: 90px;
+      top: 1rem;
+      left: 1rem;
+      width: auto;
+    }
+
+    img {
+      width: 6rem;
     }
   }
 
+  &__logo-link {
+
+  }
+
   &__title {
-    font-family: $base-font-heading;
-    padding: 0.5rem 0;
+    display: block;
+    padding: 2rem 1rem 0;
     text-align: center;
-    font-size: 1.5rem;
+    font-family: $base-font-heading;
+    font-size: 1.8rem;
+
+    @include small {
+      padding: 2rem 7rem 0;
+      font-size: 3rem;
+    }
   }
 
   &__menu {
     display: block;
     text-align: center;
     margin: 1rem auto;
-    // border-top: 1px solid $color-border;
     border-bottom: 1px dashed $color-border;
   }
 
@@ -48,17 +65,41 @@
 
   &__link {
     display: block;
-    border-bottom: 2px solid $color-transparent;
-    font-weight: lighter;
-    font-size: 1rem;
-    font-family: $base-font;
+    position: relative;
     transition: 400ms;
-    color: $color-body;
-    font-family: $base-font-body;
-    font-size: 18px;
+    color: $color-navigation-fg;
+    font-family: $base-font-heading;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    border-bottom: 1px dotted lighten($color-body, 10%);
+
+    &::after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 1px;
+      margin-top: 2px;
+      background-color: $color-light2;
+      transition: $animation-speed;
+    }
 
     &--active {
       font-weight: bold;
+
+      &::after {
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: none;
+
+      &::after {
+        width: 100%;
+        height: 1px;
+      }
     }
   }
 
