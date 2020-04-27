@@ -33,6 +33,10 @@ p {
   }
 }
 
+p + figure {
+  margin-top: 1rem;
+}
+
 // ############################################################################
 // Headings
 // ############################################################################
@@ -98,6 +102,23 @@ h4 {
 }
 
 // ############################################################################
+// Figures
+// ############################################################################
+
+figure {
+
+}
+
+figcaption {
+  font-size: $body-font-size-small;
+  text-align: center;
+}
+
+img + figcaption {
+  margin-top: -1.5rem;
+}
+
+// ############################################################################
 // Scrollbars
 // ############################################################################
 
@@ -143,43 +164,29 @@ strong {
 // ############################################################################
 
 blockquote {
+  display: block;
+  position: relative;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+  font-size: 22px;
+  font-family: $base-font-bold;
+  line-height: 1.4;
+  color: $color-brand;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgba($color-body, 0.1);
+  color: $color-body;
 
-  p {
-    font-style: italic;
-    font-size: 24px;
-    font-family: $base-font-bold;
-    line-height: 1.4;
-    color: $color-brand;
-    text-align: center;
-
-    @include small {
-      font-size: 32px;
-    }
-  }
-
-  // We're inside an orange container, so...
-  .color-orange & {
-    color: $color-white;
-  }
-
-  cite {
+  &::before {
     display: block;
-    font-size: 18px;
-    font-family: $base-font;
-    text-align: right;
-
-    &::before {
-      content: "— ";
-    }
-
-    @include small {
-      font-size: 24px;
-    }
-
-    @include medium {
-      padding-top: 64px;
-      padding-right: 128px;
-    }
+    position: absolute;
+    top: -3.5rem;
+    left: -0.5rem;
+    content: "“";
+    font-size: 5rem;
+    //color: rgba($color-body, 0.1);
   }
 }
 
