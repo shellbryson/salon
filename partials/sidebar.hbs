@@ -1,30 +1,11 @@
-<div class="sidebar">
+<div class="sal-sidebar">
 
-  <div class="sidebar__section">
-    <div class="sidebar__logo">
-      <a class="sidebar__logo-link" href="/">
-        <img src="{{@site.logo}}" alt="{{@site.title}} logo" />
-      </a>
-    </div>
-
-    <div class="sidebar__title">
-      <h2>{{@site.title}}</h2>
-    </div>
-
-    <div class="sidebar__description">
-      <p>{{@site.description}}</p>
-    </div>
-  </div>
-
-  <div class="sidebar__section">
+  <div class="sal-sidebar__section">
     {{> sidebar-search}}
   </div>
 
-  <div class="sidebar__section">
-    {{#get "posts" limit="9" include="tags,authors" as |post|}}
-    {{#post}}
-    {{> card-post}}
-    {{/post}}
-    {{/get}}
+  <div class="sal-sidebar__section">
+    {{> sidebar-posts}}
   </div>
+
 </div>

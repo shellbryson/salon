@@ -1,0 +1,7 @@
+<section class="sal-sidebar__posts">
+  {{#get "posts" limit="9" include="tags,authors" as |post|}}
+  {{#post}}
+  {{> card-post}}
+  {{/post}}
+  {{/get}}
+</section>
