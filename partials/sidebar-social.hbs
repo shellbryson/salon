@@ -1,0 +1,18 @@
+<section class="sal-sidebar__social">
+  <h3>Social</h3>
+
+  <div class="sal-sidebar__inner">
+
+    {{#if @site.facebook}}
+    <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank"
+      rel="noopener"><img src="{{asset "dist/images/facebook.svg"}}" alt="Find us on Facebook" /></a>
+    {{/if}}
+
+    {{#if @site.twitter}}
+    <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
+      rel="noopener"><img src="{{asset "dist/images/twitter.svg"}}" alt="Find us on Twitter" /></a>
+    {{/if}}
+
+  </div>
+
+</section>

@@ -1,7 +1,12 @@
 <section class="sal-sidebar__posts">
-  {{#get "posts" limit="9" include="tags,authors" as |post|}}
-  {{#post}}
-  {{> card-post}}
-  {{/post}}
-  {{/get}}
+  <h3>Latest posts</h3>
+
+  <div class="sal-sidebar__inner">
+    {{#get "posts" limit="9" include="tags,authors" as |post|}}
+    {{#post}}
+    {{> card-post}}
+    {{/post}}
+    {{/get}}
+  </div>
+
 </section>
