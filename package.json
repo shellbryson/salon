@@ -2,10 +2,10 @@
   "name": "salon",
   "description": "Edinburgh Literary Salon Ghost Theme",
   "demo": "https://edinburgliterarysalon.org",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "ghost": ">=3.0.0",
-    "ghost-api": "v2"
+    "ghost-api": "v3"
   },
   "screenshots": {
     "desktop": "assets/screenshot-desktop.jpg"

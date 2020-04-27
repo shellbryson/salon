@@ -1,23 +1,22 @@
-<nav class="navigation">
+<nav class="sal-navigation">
 
-  <div class="navigation__logo">
-    <a class="navigation__logo-link" href="/">
-      <img src="{{@site.logo}}" alt="{{@site.title}} logo" />
+  <div class="sal-navigation__logo">
+    <a class="sal-navigation__logo-link" href="/">
+      <img src="{{asset "dist/images/logo-white.svg"}}" alt="{{@site.title}} logo" />
     </a>
   </div>
 
-  <div class="navigation__title">
+  <div class="sal-navigation__title">
     {{@site.title}}
   </div>
 
-  <ul class="navigation__menu">
+  <ul class="sal-navigation__menu">
     {{#foreach navigation}}
-    <li class="navigation__entry" role="menuitem">
-      <a class="navigation__link {{#if current}} navigation__link--active{{/if}}"
+    <li class="sal-navigation__entry" role="menuitem">
+      <a class="sal-navigation__link {{#if current}} sal-navigation__link--active{{/if}}"
         href="{{url absolute="true"}}">{{label}}</a>
     </li>
     {{/foreach}}
   </ul>
-
 
 </nav>

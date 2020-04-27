@@ -3,7 +3,7 @@
 // ############################################################################
 
 body {
-  background-color: $color-white;
+  background-color: $color-background;
   width: 100%;
 }
 
@@ -12,17 +12,17 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  margin: 0;
+  padding: 0;
 
   &__layout {
-    background-color: $color-background;
+    background-color: $color-background-body;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
   }
 
   &__lane {
-    // width: 100%;
-    // margin-bottom: 3rem;
 
     img {
       max-width: 400px;

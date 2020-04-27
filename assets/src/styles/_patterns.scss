@@ -4,6 +4,7 @@
 
 body {
   @include font;
+  font-size: $body-font-size;
 }
 
 .visually-hidden,
@@ -18,10 +19,10 @@ body {
 p {
   font-family: $base-font-body;
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.38;
+  font-size: 1.1rem;
+  line-height: 1.5;
   color: $color-body;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -30,7 +31,6 @@ p {
   .sal__footer & {
     font-size: 0.75rem;
   }
-
 }
 
 // ############################################################################
@@ -189,18 +189,23 @@ blockquote {
 
 // Default non-content links (images & misc page furnature)
 a {
-  @include font;
-  font-weight: 600;
   text-decoration: none;
 
-  .sal__content & {
-    color: $color-body;
+  .content & {
+    @include font;
+    font-weight: 600;
+
+    color: $color-link1;
+    border-bottom: 1px dotted $color-link1;
+    transition: $animation-speed;
 
     &:focus,
     &:hover {
-      color: $color-brand;
+      color: $color-link2;
+      border-bottom: 1px dotted $color-body;
     }
   }
+
 }
 
 // ############################################################################
@@ -216,20 +221,20 @@ strong {
 // ############################################################################
 
 // Trick to maintain 16:9 ratio:
-.mz-video {
-  height: 0px;
-  position: relative;
-  margin: 1rem 0;
-  padding-top: 56.25%;
+// .mz-video {
+//   height: 0px;
+//   position: relative;
+//   margin: 1rem 0;
+//   padding-top: 56.25%;
 
-  &__source {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
+//   &__source {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
+// }
 
 // ############################################################################
 // Forms
